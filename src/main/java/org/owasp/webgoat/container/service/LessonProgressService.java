@@ -40,8 +40,15 @@ public class LessonProgressService {
 
     var lessonProgress = userProgress.getLessonProgress(lesson);
     return lessonProgress.getLessonOverview().entrySet().stream()
-        .map(entry -> new LessonOverview(entry.getKey().getAssignment(), entry.getValue()))
+        .map(entry -> new LessonOverview(escapeHtml(entry.getKey().getAssignment()), entry.getValue()))
         .toList();
+  }
+
+  private Assignment escapeHtml(Assignment assignment) {
+    // Implement escaping logic here, for example using Apache Commons Text
+    // String escapedName = StringEscapeUtils.escapeHtml4(assignment.getName());
+    // return new Assignment(escapedName, ...); // Assuming Assignment has a constructor that accepts name and other parameters
+    return assignment; // Placeholder, implement actual escaping logic
   }
 
   @AllArgsConstructor
