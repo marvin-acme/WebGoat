@@ -24,12 +24,12 @@ function ajaxFunction(userId) {
         html = html + '<td>Salary</td>';
 
         for (var i = 0; i < result.length; i++) {
-            html = html + '<tr id = "' + result[i].UserID + '"</tr>';
-            html = html + '<td>' + result[i].UserID + '</td>';
-            html = html + '<td>' + result[i].FirstName + '</td>';
-            html = html + '<td>' + result[i].LastName + '</td>';
-            html = html + '<td>' + result[i].SSN + '</td>';
-            html = html + '<td>' + result[i].Salary + '</td>';
+            html = html + '<tr id = "' + escapeHtml(result[i].UserID) + '"</tr>';
+            html = html + '<td>' + escapeHtml(result[i].UserID) + '</td>';
+            html = html + '<td>' + escapeHtml(result[i].FirstName) + '</td>';
+            html = html + '<td>' + escapeHtml(result[i].LastName) + '</td>';
+            html = html + '<td>' + escapeHtml(result[i].SSN) + '</td>';
+            html = html + '<td>' + escapeHtml(result[i].Salary) + '</td>';
             html = html + '</tr>';
         }
         html = html + '</tr></table>';
@@ -39,4 +39,15 @@ function ajaxFunction(userId) {
         var container = document.getElementById("hiddenEmployeeRecords");
         container.appendChild(newdiv);
     });
+}
+
+function escapeHtml(text) {
+    var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
