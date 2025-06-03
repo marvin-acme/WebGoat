@@ -40,8 +40,14 @@ public class LessonProgressService {
 
     var lessonProgress = userProgress.getLessonProgress(lesson);
     return lessonProgress.getLessonOverview().entrySet().stream()
-        .map(entry -> new LessonOverview(entry.getKey().getAssignment(), entry.getValue()))
+        .map(entry -> new LessonOverview(escapeHtml(entry.getKey().getAssignment()), entry.getValue()))
         .toList();
+  }
+
+  private String escapeHtml(Assignment assignment) {
+    // Assuming Assignment has a method to get its name or description
+    // Implement escaping logic here, for example using Apache Commons Text
+    return org.apache.commons.text.StringEscapeUtils.escapeHtml4(assignment.toString());
   }
 
   @AllArgsConstructor
@@ -51,7 +57,7 @@ public class LessonProgressService {
   // so creating intermediate object is the easiest solution
   private static class LessonOverview {
 
-    private Assignment assignment;
+    private String assignment;
     private Boolean solved;
   }
 }
