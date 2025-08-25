@@ -1,23 +1,17 @@
 # Starter pipeline
-- task: xygeni-scanner@1
-  inputs:
-    scanDirectory: '$(Build.Repository.LocalPath)'
-    xygeniToken: 'xyo_11dc679e62463e1193827a20214200abd23679afb1ac1910117689c69fa2d915'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+trigger: none
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: xygeni-scanner@1
+  inputs:
+    xygeniToken: 'xyo_11dc679e62463e1193827a20214200abd23679afb1ac1910117689c69fa2d915'
+    scanDirectory: '$(Build.Repository.LocalPath)'
+    suspectdeps: true
+    iac: true
