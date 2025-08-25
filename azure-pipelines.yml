@@ -11,7 +11,6 @@ pool:
 steps:
 - task: xygeni-scanner@1
   inputs:
-    xygeniToken: 'xyo_11dc679e62463e1193827a20214200abd23679afb1ac1910117689c69fa2d915'
     scanDirectory: '$(Build.Repository.LocalPath)'
     suspectdeps: true
     iac: true
