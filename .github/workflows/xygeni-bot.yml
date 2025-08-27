@@ -1,7 +1,8 @@
 name: Xygeni Bot
 on:
   workflow_dispatch:  # Allows manual triggering
-  # no schedule triggers
+  schedule:
+    - cron: '00:00'
 
 permissions:
   contents: write
@@ -27,7 +28,7 @@ jobs:
         id: Xygeni-Scanner
         with:
           command: scan --run=deps,sast --auto-remediate --no-upload --format none
-          xygeni_url: https://apidemo.xygeni.io/deps-doctor-service
+          xygeni_url: https://api.xygeni.io
           token: ${{ secrets.XYGENI_TOKEN }}
           # run PR from actions should be enabled
           gh_token: ${{ secrets.GITHUB_TOKEN }} 
