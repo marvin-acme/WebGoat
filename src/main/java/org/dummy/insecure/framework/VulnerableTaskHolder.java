@@ -19,6 +19,8 @@ public class VulnerableTaskHolder implements Serializable {
 
   private static final long serialVersionUID = 2;
 
+  private static final String COOKIE_PATH = "COOKIE_PATH";
+
   private String taskName;
   private String taskAction;
   private LocalDateTime requestedExecutionTime;
@@ -47,7 +49,7 @@ public class VulnerableTaskHolder implements Serializable {
   private void readObject(ObjectInputStream stream) throws Exception {
   
     CookieGenerator generator = new CookieGenerator();
-    generator.setCookiePath("test");
+    generator.setCookiePath(COOKIE_PATH);
   
     // unserialize data so taskName and taskAction are available
     stream.defaultReadObject();
