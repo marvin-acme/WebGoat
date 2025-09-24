@@ -11,6 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.util.CookieGenerator;
 
 @Slf4j
 // TODO move back to lesson
@@ -44,6 +45,10 @@ public class VulnerableTaskHolder implements Serializable {
    * Execute a task when de-serializing a saved or received object.
    */
   private void readObject(ObjectInputStream stream) throws Exception {
+  
+    CookieGenerator generator = new CookieGenerator();
+    generator.setCookiePath("test");
+  
     // unserialize data so taskName and taskAction are available
     stream.defaultReadObject();
 
