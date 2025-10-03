@@ -46,4 +46,1982 @@ public class SqlInjectionChallengeLogin implements AssignmentEndpoint {
       }
     }
   }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
+  @PostMapping("/SqlInjectionAdvanced/login")
+  @ResponseBody
+  public AttackResult login(
+      @RequestParam("username_login") String username,
+      @RequestParam("password_login") String password)
+      throws Exception {
+    try (var connection = dataSource.getConnection()) {
+      var statement =
+          connection.prepareStatement(
+              "select password from sql_challenge_users where userid = ? and password = ?");
+      statement.setString(1, username);
+      statement.setString(2, password);
+      var resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+        return ("tom".equals(username))
+            ? success(this).build()
+            : failed(this).feedback("ResultsButNotTom").build();
+      } else {
+        return failed(this).feedback("NoResultsMatched").build();
+      }
+    }
+  }
 }
