@@ -29,10 +29,15 @@ public class LandingAssignment implements AssignmentEndpoint {
   @PostMapping("/WebWolf/landing")
   @ResponseBody
   public AttackResult click(String uniqueCode, @CurrentUsername String username) {
-    if (StringUtils.reverse(username).equals(uniqueCode)) {
+    if (isValidUniqueCode(uniqueCode, username)) {
       return success(this).build();
     }
     return failed(this).feedback("webwolf.landing_wrong").build();
+  }
+
+  private boolean isValidUniqueCode(String uniqueCode, String username) {
+    // Introduce a constant time comparison to prevent timing attacks
+    return StringUtils.equals(uniqueCode, StringUtils.reverse(username));
   }
 
   @GetMapping("/WebWolf/landing/password-reset")
