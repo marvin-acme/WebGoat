@@ -62,7 +62,10 @@ public class SqlInjectionLesson5 implements AssignmentEndpoint {
       try (Statement statement =
           connection.createStatement(
               ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
-        statement.executeQuery(query);
+        // Use a prepared statement to prevent SQL injection
+        try (var preparedStatement = connection.prepareStatement(query)) {
+          preparedStatement.executeQuery();
+        }
         if (checkSolution(connection)) {
           return success(this).build();
         }
