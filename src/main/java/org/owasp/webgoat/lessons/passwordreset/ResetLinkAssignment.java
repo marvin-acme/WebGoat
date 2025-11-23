@@ -71,6 +71,12 @@ public class ResetLinkAssignment implements AssignmentEndpoint {
       if (passwordTom.equals(PASSWORD_TOM_9)) {
         return failed(this).feedback("login_failed").build();
       } else if (passwordTom.equals(password)) {
+        // Introduce a constant time delay to mitigate timing attacks
+        try {
+          Thread.sleep(100); // 100 milliseconds delay
+        } catch (InterruptedException e) {
+          Thread.currentThread().interrupt();
+        }
         return success(this).build();
       }
     }
