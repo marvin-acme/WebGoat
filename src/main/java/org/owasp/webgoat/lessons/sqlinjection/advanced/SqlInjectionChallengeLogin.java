@@ -32,7 +32,7 @@ public class SqlInjectionChallengeLogin implements AssignmentEndpoint {
     try (var connection = dataSource.getConnection()) {
       var statement =
           connection.prepareStatement(
-              "select password from sql_challenge_users where userid = ? and password = ?");
+              "select password from sql_challenge_users where username = ? and password = ?");
       statement.setString(1, username);
       statement.setString(2, password);
       var resultSet = statement.executeQuery();
