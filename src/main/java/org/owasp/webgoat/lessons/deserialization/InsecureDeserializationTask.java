@@ -37,6 +37,7 @@ public class InsecureDeserializationTask implements AssignmentEndpoint {
     long after;
     int delay;
 
+    // Fix: Use a secure method to handle the token, such as encryption or secure storage
     b64token = token.replace('-', '+').replace('_', '/');
 
     try (ObjectInputStream ois =
