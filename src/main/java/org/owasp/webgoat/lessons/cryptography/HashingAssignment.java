@@ -36,12 +36,14 @@ public class HashingAssignment implements AssignmentEndpoint {
 
       String secret = SECRETS[new Random().nextInt(SECRETS.length)];
 
-      MessageDigest md = MessageDigest.getInstance("MD5");
+      // Use a stronger hash algorithm instead of MD5
+      MessageDigest md = MessageDigest.getInstance("SHA-256");
       md.update(secret.getBytes());
       byte[] digest = md.digest();
       md5Hash = DatatypeConverter.printHexBinary(digest).toUpperCase();
       request.getSession().setAttribute("md5Hash", md5Hash);
-      request.getSession().setAttribute("md5Secret", secret);
+      // Avoid storing the secret in the session
+      // request.getSession().setAttribute("md5Secret", secret);
     }
     return md5Hash;
   }
@@ -55,7 +57,8 @@ public class HashingAssignment implements AssignmentEndpoint {
       String secret = SECRETS[new Random().nextInt(SECRETS.length)];
       sha256 = getHash(secret, "SHA-256");
       request.getSession().setAttribute("sha256Hash", sha256);
-      request.getSession().setAttribute("sha256Secret", secret);
+      // Avoid storing the secret in the session
+      // request.getSession().setAttribute("sha256Secret", secret);
     }
     return sha256;
   }
@@ -67,13 +70,14 @@ public class HashingAssignment implements AssignmentEndpoint {
       @RequestParam String answer_pwd1,
       @RequestParam String answer_pwd2) {
 
-    String md5Secret = (String) request.getSession().getAttribute("md5Secret");
-    String sha256Secret = (String) request.getSession().getAttribute("sha256Secret");
+    // Retrieve the hashes instead of secrets
+    String md5Hash = (String) request.getSession().getAttribute("md5Hash");
+    String sha256Hash = (String) request.getSession().getAttribute("sha256Hash");
 
     if (answer_pwd1 != null && answer_pwd2 != null) {
-      if (answer_pwd1.equals(md5Secret) && answer_pwd2.equals(sha256Secret)) {
+      if (answer_pwd1.equals(md5Hash) && answer_pwd2.equals(sha256Hash)) {
         return success(this).feedback("crypto-hashing.success").build();
-      } else if (answer_pwd1.equals(md5Secret) || answer_pwd2.equals(sha256Secret)) {
+      } else if (answer_pwd1.equals(md5Hash) || answer_pwd2.equals(sha256Hash)) {
         return failed(this).feedback("crypto-hashing.oneok").build();
       }
     }
