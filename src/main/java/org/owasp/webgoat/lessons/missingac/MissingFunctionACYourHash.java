@@ -38,10 +38,21 @@ public class MissingFunctionACYourHash implements AssignmentEndpoint {
   public AttackResult simple(String userHash) {
     User user = userRepository.findByUsername("Jerry");
     DisplayUser displayUser = new DisplayUser(user, PASSWORD_SALT_SIMPLE);
-    if (userHash.equals(displayUser.getUserHash())) {
+    if (constantTimeEquals(userHash, displayUser.getUserHash())) {
       return success(this).feedback("access-control.hash.success").build();
     } else {
       return failed(this).build();
     }
+  }
+
+  private boolean constantTimeEquals(String a, String b) {
+    if (a.length() != b.length()) {
+      return false;
+    }
+    int result = 0;
+    for (int i = 0; i < a.length(); i++) {
+      result |= a.charAt(i) ^ b.charAt(i);
+    }
+    return result == 0;
   }
 }
