@@ -47,12 +47,12 @@ public class MavenWrapperDownloader {
 
     public static void main(String args[]) {
         System.out.println("- Downloader started");
-        File baseDirectory = new File(args[0]);
+        File baseDirectory = new File(args[0]).getCanonicalFile();
         System.out.println("- Using base directory: " + baseDirectory.getAbsolutePath());
 
         // If the maven-wrapper.properties exists, read it and check if it contains a custom
         // wrapperUrl parameter.
-        File mavenWrapperPropertyFile = new File(baseDirectory, MAVEN_WRAPPER_PROPERTIES_PATH);
+        File mavenWrapperPropertyFile = new File(baseDirectory, MAVEN_WRAPPER_PROPERTIES_PATH).getCanonicalFile();
         String url = DEFAULT_DOWNLOAD_URL;
         if(mavenWrapperPropertyFile.exists()) {
             FileInputStream mavenWrapperPropertyFileInputStream = null;
@@ -75,7 +75,7 @@ public class MavenWrapperDownloader {
         }
         System.out.println("- Downloading from: " + url);
 
-        File outputFile = new File(baseDirectory.getAbsolutePath(), MAVEN_WRAPPER_JAR_PATH);
+        File outputFile = new File(baseDirectory.getAbsolutePath(), MAVEN_WRAPPER_JAR_PATH).getCanonicalFile();
         if(!outputFile.getParentFile().exists()) {
             if(!outputFile.getParentFile().mkdirs()) {
                 System.out.println(
@@ -86,11 +86,11 @@ public class MavenWrapperDownloader {
         try {
             downloadFileFromURL(url, outputFile);
             System.out.println("Done");
-            System.exit(0);
+            // Removed System.exit(0);
         } catch (Throwable e) {
             System.out.println("- Error downloading");
             e.printStackTrace();
-            System.exit(1);
+            // Removed System.exit(1);
         }
     }
 
