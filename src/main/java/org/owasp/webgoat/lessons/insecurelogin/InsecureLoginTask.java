@@ -18,7 +18,13 @@ public class InsecureLoginTask implements AssignmentEndpoint {
   @PostMapping("/InsecureLogin/task")
   @ResponseBody
   public AttackResult completed(@RequestParam String username, @RequestParam String password) {
-    if ("CaptainJack".equals(username) && "BlackPearl".equals(password)) {
+    boolean isAuthenticated = "CaptainJack".equals(username) && "BlackPearl".equals(password);
+    try {
+        Thread.sleep(100); // Introduce a constant delay
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+    }
+    if (isAuthenticated) {
       return success(this).build();
     }
     return failed(this).build();
