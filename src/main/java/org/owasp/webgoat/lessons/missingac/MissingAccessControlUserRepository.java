@@ -41,13 +41,19 @@ public class MissingAccessControlUserRepository {
   }
 
   public User save(User user) {
+    String hashedPassword = hashPassword(user.getPassword());
     jdbcTemplate.update(
         "INSERT INTO access_control_users(username, password, admin)"
             + " VALUES(:username,:password,:admin)",
         new MapSqlParameterSource()
             .addValue("username", user.getUsername())
-            .addValue("password", user.getPassword())
+            .addValue("password", hashedPassword)
             .addValue("admin", user.isAdmin()));
     return user;
+  }
+
+  private String hashPassword(String password) {
+    // Implement a secure password hashing mechanism here, e.g., BCrypt
+    return BCrypt.hashpw(password, BCrypt.gensalt());
   }
 }
