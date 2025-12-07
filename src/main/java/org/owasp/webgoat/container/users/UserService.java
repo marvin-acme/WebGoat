@@ -50,8 +50,9 @@ public class UserService implements UserDetailsService {
   }
 
   private void createLessonsForUser(WebGoatUser webGoatUser) {
-    jdbcTemplate.execute("CREATE SCHEMA \"" + webGoatUser.getUsername() + "\" authorization dba");
-    flywayLessons.apply(webGoatUser.getUsername()).migrate();
+    String schemaName = webGoatUser.getUsername();
+    jdbcTemplate.execute("CREATE SCHEMA \"" + schemaName.replace("\"", "\"\"") + "\" authorization dba");
+    flywayLessons.apply(schemaName).migrate();
   }
 
   public List<WebGoatUser> getAllUsers() {
