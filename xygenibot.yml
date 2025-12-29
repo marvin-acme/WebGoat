@@ -115,3 +115,7 @@ sast:
   # This property sets the AI agent to be used. One of the available within ai-agents.
   # Use global to use the integration configured into your account if any; Else it defaults to xygeni
   ai-remediation-agent: global
+
+# If true, self-signed certificates are allowed in the target on-premises SCM system.
+# Use with caution !
+allowSelfSignedCertificates: false
