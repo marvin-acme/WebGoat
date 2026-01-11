@@ -45,6 +45,11 @@ public class Servers {
   public List<Server> sort(@RequestParam String column) throws Exception {
     List<Server> servers = new ArrayList<>();
 
+    // Validate the column input to prevent SQL injection
+    if (!isValidColumn(column)) {
+      throw new IllegalArgumentException("Invalid column name");
+    }
+
     try (var connection = dataSource.getConnection()) {
       try (var statement =
           connection.prepareStatement(
@@ -67,5 +72,11 @@ public class Servers {
       }
     }
     return servers;
+  }
+
+  private boolean isValidColumn(String column) {
+    // Define a list of valid column names
+    List<String> validColumns = List.of("id", "hostname", "ip", "mac", "status", "description");
+    return validColumns.contains(column);
   }
 }
