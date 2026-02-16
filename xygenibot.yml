@@ -55,10 +55,6 @@ sast:
 
   # Languages of vulnerabilities to remediate
   languages:
-    - 'java'
-    - 'javascript'
-    - 'php'
-    - 'python'
 
   # severities of vulnerabilities to remediate
   severities:
